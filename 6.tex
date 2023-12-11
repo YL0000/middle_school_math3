@@ -575,7 +575,46 @@ $A_1(-1,0)$、$B_1(0,-1)$．过$A$作单位圆的切线$\ell$, 在$\ell$上这
 
 \begin{figure}[htp]
     \centering
-\includegraphics[scale=.6]{fig/6-8.PNG}
+	\begin{tikzpicture}[scale=1.2]\scriptsize
+	\draw[-latex] (-2.403,0) -- (2.2,0);
+	\draw[-latex] (0,-1.5) -- (0,2);
+	\draw[-latex] (1,-2.5) -- (1,2.6);
+	\node at (2.4,0) {$x$};
+	\node at (0.15,2.1) {$y$};
+	\node at (1.2,2.5) {$\ell$};
+	\node at (1.45,-0.2) {$A(1,0)$};
+	\node [label={[shift={(-0.12,-0.42)}]$O$}] at (0,0) {};
+	\draw (0,0) circle (1);
+	\node [label={[shift={(-0.12,-0.42)}]$B$}] at (0,1) {};
+	\node [label={[shift={(-0.13,-0.15)}]$B_1$}] at (0,-1) {};
+	\node [label={[shift={(0.24,-0.45)}]$A_1$}] at (-1,0) {};
+	\node [label={[shift={(0.3, -0.38)}]$-1$}] at (1,-1) {$-$};
+	\node [label={[shift={(0.3, -0.38)}]$-2$}] at (1,-2) {$-$};
+	\node [label={[shift={(0.2, -0.38)}]$1$}] at (1,1) {$-$};
+	\node [label={[shift={(0.2, -0.38)}]$2$}] at (1,2) {$-$};
+	
+	\draw[dashed] (1,1) arc (90:118.648:1.1); 	
+	\draw[dashed] (1,-1) arc (270:241.352:1.1); 
+	\draw[dashed] (1,2) arc (105.103:152:2.33546); 
+	\draw[dashed] (1,-2) arc (254.897:208:2.33546); 
+	\coordinate (circle2) at (-0.416147,0.909297); 							% (cos 2, sin 2)
+	\coordinate (circleminus2) at (-0.416147,-0.909297); 					% (cos -2, sin -2)		
+	\node [label={[shift={(-0.13,-0.39)}]$1$}] at (0.540302,0.841471) {};  % (cos 1, sin 1)
+	\node [label={[shift={(-0.13,-0.53)}]$-1$}] at (0.540302,-0.841471) {};  % (cos -1, sin -1)
+	\node [label={[shift={(-0.15,-0.2)}]$2$}] at (circle2) {}; 
+	\node [label={[shift={(-0.2,-0.4)}]$-2$}] at (circleminus2) {}; 
+	\draw (circle2) -- (-2.60168,-0.0909297);
+	\draw (-2.60168,0.0909297) -- (circleminus2); 							% two lines intersect at (sec 2, 0)
+	
+	\coordinate (P1) at (0.18912,0.981954);
+	\coordinate (S1) at (1,1.38053);
+	\draw[-latex] (0,0)--(P1);
+	\draw[-latex] (0.3,0) arc (0:79.0986:0.3);
+	\node at (0.35,0.3) {$\theta$};
+	\node [label={[shift={(0,-0.07)}]$P_1$}] at (P1) {}; 
+	\node [label={[shift={(0.25, -0.38)}]$S_1$}] at (S1) {$-$};
+	\draw[dashed] (S1) to[bend right] (P1);
+\end{tikzpicture}
     \caption{}
 \end{figure}
 
